@@ -1,0 +1,53 @@
+explicação codigo:
+
+import random
+import string
+
+: importa as bibliotecas necessarias pra usar
+
+def gerar_senha (tamanho): 
+
+: "gerar_senha" é o nome da função def, e "(tamanho)" é pra ficar intuitivo que
+essa aréa do codigo é onde fica a parte de escolher a quantidade de caracteres
+
+caracteres = string.asci_letters + string.digits + string.ponctuation
+
+: essa parte do "caracteres" é parte da biblioteca strings
+"string.asci_letters" faz com que nos caracteres da senha seja
+usado tanto letras minusculas quanto maiusculas, "string.digits" faz com que
+na senha seja usado numeros, "string.punctuation" faz com que seja usado
+caracteres especiais na senha.
+
+
+senha = ''.join(random.choices(caracteres, k=tamanho))
+
+: "senha" senha é uma string usada pra ficar intuitivo que é nessa área do codigo onde
+a senha vai.
+
+
+ "''" é onde apos o terminal a senha vai, "join" é usado pra tirar
+os traços da senha e ficar tudo junto.
+
+"(random.choices)" é pra a escolha de caracteres seja aleatoria, não fazendo
+ter um padrao na ordem, nem nos tipos de caracteres, fazendo com que a senha
+seja totalmente aleatoria.
+
+"caracteres" trás a parte do codigo onde tem a library strings pra dentro da
+string "senha"
+
+"k=tamanho"
+
+: "k" é a sintaxe da library strings, se usar outra sintaxe vai dar erro
+e usa "tamanho".
+
+tamanho = int(input("Digite o tamanho da senha: "))
+
+: aqui é onde o usuario escolhe o tamanho da senha que ele quer.
+
+
+print("Sua senha gerada é:", gerar_senha(tamanho))
+
+: aqui é onde vem o retorno da requisição que o usuario pediu, chega a senha com todos os caracteres exatos que ele pediu
+
+
+
